@@ -1,6 +1,6 @@
 #include "mbed.h"
-#include "Motor.h"
-#include "rtos.h"
+#include "Motor.h" //for motors
+#include "rtos.h" //for threads
 #include "XNucleo53L0A1.h"
 #include <stdio.h>
 #define VL53L0_I2C_SDA   p28
@@ -12,11 +12,13 @@
  
 using namespace std;
 
+//stores previous moves
 vector<action> previousMoves;
 
- 
+//pc communication
+ Serial pc(USBTX,USBRX);
+
  //lidar pins
-Serial pc(USBTX,USBRX);
 DigitalOut shdn(p26);
 DigitalOut myled(LED1);
 DigitalOut myled2(LED2);
@@ -81,7 +83,7 @@ void lidar(void)
         }
         if (status == VL53L0X_ERROR_NONE) {
             //pc.printf("D=%ld mm\r\n", distance);
-            pc.printf("D=%ld\r\n", lidarDistance);
+            pc.printf("D=%ld\r\n", lidarDistance); //print distance lidar sees
         }
         Thread::wait(10);
     }
@@ -107,7 +109,7 @@ void wheels(void)
                             printf("\r\naction: %d, duration: %f\r\n",previousMoves.back().first,previousMoves.back().second);
                             previousMoves.pop_back();
                             wait(1.5);
-                            switch (currentAction.first) {
+                            switch (currentAction.first) {  //go home loop
                                 case 0: //go forward
                                     m_left.speed(1);
                                     m_right.speed(1);
@@ -164,6 +166,7 @@ void wheels(void)
                             //add release code here
                         }
                         break;
+                  
                     case '6': //button 6 down arrow go backward
                         if (bhit=='1') {
                             pc.printf("starting\r\n");
@@ -215,6 +218,7 @@ void wheels(void)
                             m_left.speed(leftSpeed);
                         }
                         break;
+                  
                     case '8': //button 8 right arrow turns car right
                         if (bhit=='1') {
                             _time.reset();
@@ -239,6 +243,7 @@ void wheels(void)
                             //add release code here
                         }
                         break;
+                  
                     default:
                         break;
                 }
