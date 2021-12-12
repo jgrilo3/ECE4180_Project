@@ -10,4 +10,5 @@ Then, the train has to be driven towards the dispenser. Once it is close enough 
 
 ## Demo Video
 
-"https://drive.google.com/file/d/1lhXcp-h30BZg4jmAzaObrC8Te0O7h2Sb/view?usp=sharing"
+https://user-images.githubusercontent.com/46701545/145703548-064a2aff-142e-4a0e-b13a-d55d67cdf5d9.mp4
+
