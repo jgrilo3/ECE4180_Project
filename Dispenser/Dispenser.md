@@ -6,3 +6,14 @@ The following black diagram provides a simple representation of how these are co
 
 To use the dispenser, a user must first order a drink by typing in the name of the soda they want in the app ("coke" or "sprite" in this case). A light will come on in the upper left of the corresponding selection on the LCD.
 Then, the train has to be driven towards the dispenser. Once it is close enough for the sonar to detect (indicated by the green dot at the top right of the LCD), the dispenser will drop the chosen drink into the train after a few seconds. 
+
+## Demo Video
+
+<!DOCTYPE html>
+<html>
+<body>
+  
+  <iframe src="https://drive.google.com/file/d/1lhXcp-h30BZg4jmAzaObrC8Te0O7h2Sb/view?usp=sharing" ></iframe>
+
+</body>
+</html>
