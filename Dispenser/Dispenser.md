@@ -1,4 +1,5 @@
 # Dispenser
+
 The dispenser is composed of an mbed, a Bluetooth LE module, an LCD, Sonar, and 2 solenoids with their driving MOSFETs. 
 The following black diagram provides a simple representation of how these are connected.
 
@@ -9,11 +10,4 @@ Then, the train has to be driven towards the dispenser. Once it is close enough 
 
 ## Demo Video
 
-<!DOCTYPE html>
-<html>
-<body>
-  
-  <iframe src="https://drive.google.com/file/d/1lhXcp-h30BZg4jmAzaObrC8Te0O7h2Sb/view?usp=sharing" ></iframe>
-
-</body>
-</html>
+"https://drive.google.com/file/d/1lhXcp-h30BZg4jmAzaObrC8Te0O7h2Sb/view?usp=sharing"
