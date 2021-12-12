@@ -1,4 +1,4 @@
 The project can be downloaded using the zip file. 
 Take all of the folders/files and upload them into an mbed project.
 
-The driver code for the I/O devices is in main.cpp
+The driver code for the train is in main.cpp
