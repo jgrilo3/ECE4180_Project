@@ -1,3 +1,5 @@
 # Thomas the Drank Engine - the all-in-one soda dispenser delivery system!
 
-Check out instructions and details of the project in the GitHub wiki!
+![alt text](https://i.imgur.com/tJl9MPY.png)
+
+To learn more about our project, check out the GitHub Wiki for instructions and additional details!
